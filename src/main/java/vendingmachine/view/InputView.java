@@ -10,7 +10,7 @@ public class InputView {
             String stringUserInput = Console.readLine();
             return Integer.parseInt(stringUserInput);
         } catch (IllegalArgumentException e) {
-            System.out.println("숫자만 입력해주세요.");
+            System.out.println("[ERROR] 숫자만 입력해주세요.");
             return showEnterMachineMoneyMessageAndGetIt();
         }
     }
@@ -21,7 +21,7 @@ public class InputView {
         try {
             return userInput.split(";");
         } catch (IllegalArgumentException e) {
-            System.out.println("상품은 세미콜론(;)으로 구분해주세요.");
+            System.out.println("[ERROR] 상품은 세미콜론(;)으로 구분해주세요.");
             return showEnterItemInfoMessageAndGetIt();
         }
     }
@@ -32,8 +32,8 @@ public class InputView {
         try {
             return Integer.parseInt(userInput);
         } catch (IllegalArgumentException e) {
-            System.out.println("숫자만 가능합니다.");
-            return showEnterMachineMoneyMessageAndGetIt();
+            System.out.println("[ERROR] 숫자만 가능합니다.");
+            return showEnterMoneyMessageAndGetIt();
         }
     }
 

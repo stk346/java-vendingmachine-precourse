@@ -10,7 +10,7 @@ public enum Coin {
     COIN_10(10);
 
     private final int amount;
-    private int count;
+    private int count = 0;
 
     Coin(final int amount) {
         this.amount = amount;
@@ -28,7 +28,22 @@ public enum Coin {
         return coins;
     }
 
+    public static Coin getCoin(int amount) {
+        for (Coin coin : values()) {
+            if (coin.getAmount() == amount) {
+                return coin;
+            }
+        }
+        return null;
+    }
 
+    public void subtractCount(int subtractCount) {
+        count = count - subtractCount;
+    }
+
+    public void addCount(int coinCount) {
+        count += coinCount;
+    }
 
     public int getAmount() {
         return amount;

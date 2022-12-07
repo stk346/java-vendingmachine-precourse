@@ -9,7 +9,13 @@ public class RandomCoinGenerator {
     private int money;
     private List<Integer> subtractionCounts = new ArrayList<>();
 
-    public RandomCoinGenerator(int money) {
+    public RandomCoinGenerator(int money) throws IllegalArgumentException {
+        if (money < 0) {
+            throw new IllegalArgumentException("[ERROR] 금액은 양수만 가능합니다.");
+        }
+        if (money % 10 > 0) {
+            throw new IllegalArgumentException("[ERROR] 금액은 10원으로 나누어 떨어져야 합니다.");
+        }
         this.money = money;
     }
 
