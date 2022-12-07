@@ -165,3 +165,19 @@ public enum Coin {
 - **Git의 커밋 단위는 앞 단계에서 README.md 파일에 정리한 기능 목록 단위**로 추가한다.
    - [AngularJS Commit Message Conventions](https://gist.github.com/stephenparish/9941e89d80e2bc58a153) 참고해 commit log를 남긴다.
 - 과제 진행 및 제출 방법은 [프리코스 과제 제출 문서](https://github.com/woowacourse/woowacourse-docs/tree/master/precourse) 를 참고한다.
+
+
+---
+## 기능 구현 목록
+
+- 자판기  
+상품 가격은 100원부터 시작하며 10원으로 나누어 떨어져야 한다.
+
+  * 금액을 입력 받아 동전을 램덤으로 생성하는 기능 (500, 100, 50, 10)
+  * 살품명과 가격, 수량을 입력 받아 상품을 생성하는 기능
+  * 금액을 입력 받고 상품명이 입력됨에 따라 금액과 수량을 차감하는 기능
+  * 남은 금액이 상품의 최저 가격보다 낮으면 금액을 반환해야 함
+  * 모든 상품이 소진된 경우 바로 잔돈을 돌려줘야 함
+  * 잔돈은 보유한 최소 동전의 개수로 반환해야 함
+  * 잔돈을 반환할 수 없다면 반환할 수 있는 금액만 반  
+
