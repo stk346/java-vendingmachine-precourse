@@ -14,7 +14,7 @@ public class OutputView {
     }
 
     public static void showMoneyOfInserted(VendingMachine vendingMachine) {
-        System.out.println("투입 금액: " + vendingMachine.getInputAmount());
+        System.out.println("투입 금액: " + vendingMachine.getInputAmount() + "원");
     }
 
     public static void showGivingBackCoins(List<Coin> givingBackCoins) {
